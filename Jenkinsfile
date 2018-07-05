@@ -25,6 +25,11 @@ pipeline{
 			steps{
 				sh './jenkins/scripts/deliver.sh'
 			}
+			post{
+				success{
+					echo 'Build success.'
+				}
+			}
 		}
 	}
 }
